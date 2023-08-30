@@ -4,7 +4,6 @@ class Position
   # マスを'f3','d6'などの表記で表現する。変数名cell_refとして取り扱う。
   COL = %w[a b c d e f g h].freeze
   ROW = %w[1 2 3 4 5 6 7 8].freeze
-
   DIRECTIONS = [
     TOP_LEFT      = :top_left,
     TOP           = :top,
@@ -37,7 +36,7 @@ class Position
   def out_of_board?
     !((0..7).cover?(row) && (0..7).cover?(col))
   end
-
+# 該当のマス目の石の状況を返す, - or B or W at String
   def stone_color(board)
     return nil if out_of_board?
 

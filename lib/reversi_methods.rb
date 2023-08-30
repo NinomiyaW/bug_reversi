@@ -35,12 +35,13 @@ module ReversiMethods
   def copy_board(to_board, from_board)
     from_board.each_with_index do |cols, row|
       cols.each_with_index do |cell, col|
-        to_board[row][col] = cell
+        to_board[col][row] = cell
       end
     end
   end
 
   def put_stone(board, cell_ref, stone_color, dry_run: false)
+    binding.break
     pos = Position.new(cell_ref)
     raise '無効なポジションです' if pos.invalid?
     raise 'すでに石が置かれています' unless pos.stone_color(board) == BLANK_CELL

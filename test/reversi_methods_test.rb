@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'minitest/autorun'
-require 'debug'
 require_relative '../lib/reversi_methods'
 
 class ReversiMethodsTest < Minitest::Test
@@ -46,7 +45,7 @@ class ReversiMethodsTest < Minitest::Test
       --------
       --------
     BOARD
-    # binding.break
+
     assert put_stone(board, 'f4', WHITE_STONE)
     assert_equal build_board(<<~BOARD), board
       --------

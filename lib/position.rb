@@ -36,7 +36,7 @@ class Position
   def out_of_board?
     !((0..7).cover?(row) && (0..7).cover?(col))
   end
-# 該当のマス目の石の状況を返す, - or B or W at String
+
   def stone_color(board)
     return nil if out_of_board?
 

@@ -45,7 +45,6 @@ class ReversiMethodsTest < Minitest::Test
       --------
       --------
     BOARD
-
     assert put_stone(board, 'f4', WHITE_STONE)
     assert_equal build_board(<<~BOARD), board
       --------
